@@ -1,0 +1,35 @@
+{
+  "name": "pages-757de6e8",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "cycle": "git add . ; git commit -m 'cycle' ; git push origin main",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "npm run pages:build && wrangler pages dev",
+    "deploy": "npm run pages:build && wrangler pages deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv ./env.d.ts"
+  },
+  "dependencies": {
+    "framer-motion": "^12.23.0",
+    "next": "15.3.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0"
+  },
+  "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.12",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20.19.4",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vercel": "^44.2.12",
+    "wrangler": "^4.23.0"
+  },
+  "description": "SeedChange is a frontend-only web application designed to engage users in sustainability and gardening by converting their residual balance into plantable seeds. The platform will feature a modern, eco-friendly design, incorporating elements of nature and growth. Users will accumulate virtual credits by registering their daily spare change, which can then be redeemed for different types of seeds. All interactions, including the conversion of credits to seeds and the educational content, will be simulated on the client-side.\n\nThe application will include a variety of features to educate and motivate users:\n*   **Seed Library:** A component showcasing different types of seeds available for redemption, including descriptions, growth requirements, and fun facts.\n*   **Virtual Garden:** A visual representation where users can see their seeds grow into plants over time, with updates and advice on how to care for them.\n*   **Sustainability Tips:** A section offering weekly tips and tricks on reducing waste, conserving water, and other eco-friendly practices.\n*   **Community Forum:** A simulated discussion board where users can share their experiences, ask questions, and learn from each other's gardening endeavors.\n\nHere is a detailed breakdown of the project's features and technical aspects:\n*   **Pages:**\n    *   **Dashboard:** The main page where users can view their current balance, redeem seeds, and access the seed library.\n    *   **Seed Library:** A page dedicated to showcasing the available seeds, with detailed information and images.\n    *   **Virtual Garden:** A page where users can view the progress of their planted seeds, receive care advice, and enjoy the simulated growth.\n    *   **Community:** A page simulating a community forum where users can interact, share knowledge, and get inspired.\n*   **Core Components:**\n    *   **`SeedCard`:** A reusable component for displaying seed information, including name, description, and an image.\n    *   **`GardenPlot`:** A component representing a single plot in the virtual garden, showing the seed's growth stage and care tips.\n    *   **`BalanceDisplay`:** A component that shows the user's current balance and allows them to redeem seeds.\n*   **Mock Data Structure:**\n    *   Seeds will be represented as an array of objects: `[{ id: 1, name: 'Tomato', description: 'Easy to grow, fruitful', image: 'tomato.jpg' }, { id: 2, name: 'Basil', description: 'Fast-growing, fragrant', image: 'basil.jpg' }]`.\n    *   The user's balance and redeemed seeds will be stored in a simulated user profile object: `{ id: 1, name: 'User', balance: 10.0, seeds: [{ id: 1, name: 'Tomato', quantity: 2 }] }`."
+}
